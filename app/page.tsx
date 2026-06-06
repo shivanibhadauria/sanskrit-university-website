@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col bg-[#05080f] text-white">
       {/* ===== Hero ===== */}
-      <section className="relative overflow-hidden">
+      <section id="admissions" className="relative overflow-hidden">
         {/* Decorative background glow / marbled texture */}
         <div
           aria-hidden

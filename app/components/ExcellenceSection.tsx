@@ -51,7 +51,7 @@ const recruiters = [
 
 export default function ExcellenceSection() {
   return (
-    <section className="bg-white text-zinc-900">
+    <section id="placements" className="bg-white text-zinc-900">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-16">
           {/* Latest Updates */}

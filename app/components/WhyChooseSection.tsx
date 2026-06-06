@@ -35,7 +35,7 @@ const features = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="bg-white text-zinc-900">
+    <section id="about" className="bg-white text-zinc-900">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Why Choose Sanskriti?</h2>

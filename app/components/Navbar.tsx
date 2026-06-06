@@ -2,13 +2,13 @@ import Link from "next/link";
 import { PillarIcon } from "./icons";
 
 const navLinks = [
-  "About Us",
-  "Academics",
-  "Admissions",
-  "International",
-  "Life @ SU",
-  "Placement",
-  "Research",
+  { label: "About Us", href: "#about" },
+  { label: "Academics", href: "#academics" },
+  { label: "Admissions", href: "#admissions" },
+  { label: "International", href: "#about" },
+  { label: "Life @ SU", href: "#life-at-su" },
+  { label: "Placement", href: "#placements" },
+  { label: "Research", href: "#research" },
 ];
 
 export default function Navbar() {
@@ -33,10 +33,10 @@ export default function Navbar() {
 
         {/* Primary navigation */}
         <ul className="hidden items-center gap-7 lg:flex">
-          {navLinks.map((label) => (
+          {navLinks.map(({ label, href }) => (
             <li key={label}>
               <Link
-                href="#"
+                href={href}
                 className="text-sm font-medium text-zinc-200 transition-colors hover:text-white"
               >
                 {label}
@@ -47,7 +47,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <Link
-          href="#"
+          href="#admissions"
           className="shrink-0 rounded-full bg-amber-400 px-6 py-2.5 text-sm font-bold text-[#1a1f4b] shadow-[0_0_20px_-4px] shadow-amber-400/40 transition-colors hover:bg-amber-300"
         >
           Apply Now

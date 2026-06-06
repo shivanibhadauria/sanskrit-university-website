@@ -108,7 +108,7 @@ export default function StoriesHighlights() {
   const [feature, ...rest] = visible;
 
   return (
-    <section className="bg-gradient-to-b from-[#0a1336] via-[#080d20] to-[#05080f]">
+    <section id="academics" className="bg-gradient-to-b from-[#0a1336] via-[#080d20] to-[#05080f]">
       <div className="mx-auto max-w-7xl px-6 py-20">
         {/* Header row */}
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">

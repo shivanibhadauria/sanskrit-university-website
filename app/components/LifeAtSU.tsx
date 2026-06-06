@@ -17,7 +17,7 @@ const items = [
 
 export default function LifeAtSU() {
   return (
-    <section className="bg-white text-zinc-900">
+    <section id="life-at-su" className="bg-white text-zinc-900">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="text-2xl font-bold sm:text-3xl">Life @ SU</h2>
 

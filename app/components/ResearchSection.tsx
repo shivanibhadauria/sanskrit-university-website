@@ -17,7 +17,7 @@ const stats = [
 
 export default function ResearchSection() {
   return (
-    <section className="bg-[#070b1c] text-white">
+    <section id="research" className="bg-[#070b1c] text-white">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
           Cutting Edge{" "}
