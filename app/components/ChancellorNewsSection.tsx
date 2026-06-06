@@ -7,18 +7,21 @@ const news = [
     title: "Sanskriti University Ranked Top in Innovation",
     date: "Dec 12, 2024",
     gradient: "from-sky-300 to-blue-500",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
   },
   {
     source: "Hindustan Times",
     title: "New Research Center Inaugurated by Education Minister",
     date: "Nov 28, 2024",
     gradient: "from-amber-300 to-orange-500",
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop",
   },
   {
     source: "Education World",
     title: "University Wins National Excellence Award 2024",
     date: "Oct 15, 2024",
     gradient: "from-emerald-300 to-teal-500",
+    image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -61,7 +64,11 @@ export default function ChancellorNewsSection() {
                   key={item.title}
                   className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md"
                 >
-                  <GradientMedia gradient={item.gradient} className="h-36 w-full" />
+                  <GradientMedia
+                    gradient={item.gradient}
+                    src={item.image}
+                    className="h-36 w-full"
+                  />
                   <div className="flex flex-1 flex-col p-5">
                     <p className="text-xs font-bold uppercase tracking-wide text-rose-500">
                       {item.source}
