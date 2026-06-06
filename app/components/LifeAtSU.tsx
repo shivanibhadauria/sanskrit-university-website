@@ -1,10 +1,18 @@
-import { GradientMedia } from "./Placeholder";
 import { PlayIcon } from "./icons";
 
-const videos = [
-  { title: "Annual Sports Meet", gradient: "from-zinc-400 to-zinc-700" },
-  { title: "Convocation Ceremony", gradient: "from-sky-400 to-blue-700" },
-  { title: "Cultural Night", gradient: "from-rose-400 to-purple-700" },
+const items = [
+  { 
+    title: "Annual Sports Meet", 
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop" 
+  },
+  { 
+    title: "Convocation Ceremony", 
+    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=800&auto=format&fit=crop" 
+  },
+  { 
+    title: "Cultural Night", 
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop" 
+  },
 ];
 
 export default function LifeAtSU() {
@@ -14,16 +22,17 @@ export default function LifeAtSU() {
         <h2 className="text-2xl font-bold sm:text-3xl">Life @ SU</h2>
 
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {videos.map((video) => (
+          {items.map((item) => (
             <button
-              key={video.title}
+              key={item.title}
               type="button"
               className="group relative block aspect-[16/10] overflow-hidden rounded-2xl text-left"
-              aria-label={`Play ${video.title}`}
+              aria-label={`Play ${item.title}`}
             >
-              <GradientMedia
-                gradient={video.gradient}
-                className="absolute inset-0 h-full w-full"
+              <img
+                src={item.image}
+                alt={item.title}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/30 transition-colors group-hover:bg-black/40" />
 
@@ -33,7 +42,7 @@ export default function LifeAtSU() {
               </span>
 
               <span className="absolute bottom-4 left-4 text-lg font-bold text-white drop-shadow">
-                {video.title}
+                {item.title}
               </span>
             </button>
           ))}
