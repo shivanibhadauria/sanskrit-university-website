@@ -51,6 +51,11 @@ export default function ResearchSection() {
         <div className="mt-6 grid grid-cols-1 gap-6 rounded-3xl border border-blue-500/30 bg-blue-500/5 p-6 lg:grid-cols-3">
           {/* Large card */}
           <article className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-[#0b1024] p-8 lg:col-span-2">
+            <img
+              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop"
+              alt="AI & Robotics"
+              className="absolute inset-0 h-full w-full object-cover opacity-20 transition-opacity group-hover:opacity-40"
+            />
             <div
               aria-hidden
               className="absolute inset-0 opacity-70"
@@ -73,18 +78,32 @@ export default function ResearchSection() {
           {/* Stacked small cards */}
           <div className="flex flex-col gap-6">
             <article className="group relative flex flex-1 flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#10243a] to-[#0a1424] p-6">
-              <DnaIcon className="mb-2 h-6 w-6 text-teal-400" />
-              <h3 className="text-lg font-bold">Bio-Genetics</h3>
-              <p className="mt-1 text-xs text-zinc-400">
-                Unlocking the secrets of life through genomic research.
-              </p>
+              <img
+                src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=800&auto=format&fit=crop"
+                alt="Bio-Genetics"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 transition-opacity group-hover:opacity-40"
+              />
+              <div className="relative">
+                <DnaIcon className="mb-2 h-6 w-6 text-teal-400" />
+                <h3 className="text-lg font-bold">Bio-Genetics</h3>
+                <p className="mt-1 text-xs text-zinc-400">
+                  Unlocking the secrets of life through genomic research.
+                </p>
+              </div>
             </article>
             <article className="group relative flex flex-1 flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#1a1340] to-[#0c0a24] p-6">
-              <AtomIcon className="mb-2 h-6 w-6 text-sky-400" />
-              <h3 className="text-lg font-bold">Quantum Computing</h3>
-              <p className="mt-1 text-xs text-zinc-400">
-                Next-gen processing power for complex problem solving.
-              </p>
+              <img
+                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop"
+                alt="Quantum Computing"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 transition-opacity group-hover:opacity-40"
+              />
+              <div className="relative">
+                <AtomIcon className="mb-2 h-6 w-6 text-sky-400" />
+                <h3 className="text-lg font-bold">Quantum Computing</h3>
+                <p className="mt-1 text-xs text-zinc-400">
+                  Next-gen processing power for complex problem solving.
+                </p>
+              </div>
             </article>
           </div>
         </div>
