@@ -21,6 +21,7 @@ const features = [
     title: "30+ International Ties",
     text: "Collaborations with foreign universities for student exchange programs.",
     gradient: "from-slate-300 to-slate-500",
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800&auto=format&fit=crop",
   },
   {
     icon: UsersIcon,
@@ -28,6 +29,7 @@ const features = [
     title: "Interactive Pedagogy",
     text: "Project-based learning and case studies for practical understanding.",
     gradient: "from-sky-300 to-indigo-500",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -45,36 +47,50 @@ export default function WhyChooseSection() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {/* Top reasons card */}
-          <div className="flex flex-col rounded-2xl bg-gradient-to-b from-[#1c2e7a] to-[#0f1c52] p-7 text-white shadow-xl">
-            <h3 className="text-2xl font-bold leading-tight">
-              Top Reasons
-              <br />
-              To Join SU
-            </h3>
-            <ul className="mt-6 space-y-3.5">
-              {reasons.map((reason) => (
-                <li key={reason} className="flex items-center gap-2.5 text-sm">
-                  <CheckCircleIcon className="h-4 w-4 shrink-0 text-amber-400" />
-                  <span className="text-blue-50">{reason}</span>
-                </li>
-              ))}
-            </ul>
-            <a
-              href="#"
-              className="mt-7 inline-flex items-center justify-center gap-2 rounded-lg bg-amber-400 px-5 py-3 text-sm font-bold text-[#0f1c52] transition-colors hover:bg-amber-300"
-            >
-              <DownloadIcon className="h-4 w-4" />
-              Download Brochure
-            </a>
+          <div className="relative flex flex-col overflow-hidden rounded-2xl bg-[#0f1c52] p-7 text-white shadow-xl">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src="https://images.unsplash.com/photo-1541339907198-e08759dfc3ef?q=80&w=800&auto=format&fit=crop"
+                alt="Campus"
+                className="h-full w-full object-cover opacity-30"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#1c2e7a]/90 to-[#0f1c52]/95" />
+            </div>
+
+            <div className="relative z-10 flex h-full flex-col">
+              <h3 className="text-2xl font-bold leading-tight">
+                Top Reasons
+                <br />
+                To Join SU
+              </h3>
+              <ul className="mt-6 space-y-3.5">
+                {reasons.map((reason) => (
+                  <li key={reason} className="flex items-center gap-2.5 text-sm">
+                    <CheckCircleIcon className="h-4 w-4 shrink-0 text-amber-400" />
+                    <span className="text-blue-50">{reason}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-auto pt-7">
+                <a
+                  href="#"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-amber-400 px-5 py-3 text-sm font-bold text-[#0f1c52] transition-colors hover:bg-amber-300"
+                >
+                  <DownloadIcon className="h-4 w-4" />
+                  Download Brochure
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Feature cards */}
-          {features.map(({ icon: Icon, iconWrap, title, text, gradient }) => (
+          {features.map(({ icon: Icon, iconWrap, title, text, gradient, image }) => (
             <div
               key={title}
               className="overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-sm transition-shadow hover:shadow-md"
             >
-              <GradientMedia gradient={gradient} className="h-44 w-full" />
+              <GradientMedia gradient={gradient} src={image} className="h-44 w-full" />
               <div className="p-6">
                 <span
                   className={`mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full ${iconWrap}`}
